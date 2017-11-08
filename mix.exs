@@ -24,12 +24,8 @@ defmodule Peerage.Via.Ec2.Mixfile do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    [
-      {:ex_aws, "~> 1.1"},
-      {:ex_doc, "~> 0.18.1", only: :dev, runtime: false},
-      {:hackney, "~> 1.10"},
-      {:sweet_xml, "~> 0.6.5"},
-    ]
+    [{:peerage, "~> 1.0"}, # Easy Elixir clusters, pluggable discovery
+     {:sweet_xml, "~> 0.6.5"},] # :xmerl wrapper to help query xml docs
   end
 
   def package do
